@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f14;
+  --panel: #111827;
+  --panel-2: #121a23;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e6eaf0;
+  --muted: rgba(230, 234, 240, 0.7);
+  --muted-2: rgba(230, 234, 240, 0.5);
+  --accent: #47b0ff;
+  --danger: #ff5a6a;
+  --warning: #f7b955;
+  --success: #59d18a;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-bg text-text font-sans antialiased;
+}
+
+@layer components {
+  .surface {
+    @apply bg-panel border border-border rounded-lg shadow-panel;
+  }
+
+  .surface-muted {
+    @apply bg-panel-2 border border-border rounded-lg;
+  }
+
+  .heading-xl {
+    @apply text-[2.125rem] leading-tight tracking-[-0.02em] font-semibold;
+  }
+
+  .heading-lg {
+    @apply text-2xl leading-tight font-semibold;
+  }
+
+  .heading-md {
+    @apply text-lg leading-snug font-semibold;
+  }
+
+  .caption {
+    @apply text-xs text-muted;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+}
