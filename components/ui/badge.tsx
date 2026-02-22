@@ -2,15 +2,15 @@ import { cn } from "@/lib/utils";
 
 type BadgeTone = "active" | "expiring" | "expired" | "high" | "medium" | "low";
 
-const tones: Record<BadgeTone, string> = {
-  active: "border-success/35 bg-success/10 text-success",
-  expiring: "border-warning/35 bg-warning/10 text-warning",
-  expired: "border-danger/35 bg-danger/10 text-danger",
-  high: "border-success/35 bg-success/10 text-success",
-  medium: "border-warning/35 bg-warning/10 text-warning",
-  low: "border-danger/35 bg-danger/10 text-danger"
+const map: Record<BadgeTone, string> = {
+  active: "text-success bg-success/10 border-success/30",
+  expiring: "text-warning bg-warning/10 border-warning/30",
+  expired: "text-danger bg-danger/10 border-danger/30",
+  high: "text-success bg-success/10 border-success/30",
+  medium: "text-warning bg-warning/10 border-warning/30",
+  low: "text-danger bg-danger/10 border-danger/30"
 };
 
 export function Badge({ tone, className, children }: { tone: BadgeTone; className?: string; children: React.ReactNode }) {
-  return <span className={cn("inline-flex items-center rounded-md border px-2 py-1 text-xs font-medium", tones[tone], className)}>{children}</span>;
+  return <span className={cn("inline-flex rounded-md border px-2 py-1 text-xs font-medium", map[tone], className)}>{children}</span>;
 }

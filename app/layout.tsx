@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "ContractGuardAI",
-  description: "AI-powered contract extraction and deadline reminders."
+  description: "Never miss a contract deadline again."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

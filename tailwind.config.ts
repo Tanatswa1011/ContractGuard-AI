@@ -1,11 +1,15 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}"
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "sans-serif"]
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       colors: {
         bg: "var(--bg)",
@@ -24,10 +28,7 @@ const config: Config = {
         lg: "0.625rem"
       },
       boxShadow: {
-        panel: "0 8px 24px rgba(0, 0, 0, 0.32)"
-      },
-      spacing: {
-        3: "0.75rem"
+        panel: "0 10px 24px rgba(0, 0, 0, 0.25)"
       }
     }
   },
