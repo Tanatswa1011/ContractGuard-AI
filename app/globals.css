@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f14;
+  --panel: #111827;
+  --panel-2: #121a23;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e6eaf0;
+  --muted: rgba(230, 234, 240, 0.7);
+  --muted-2: rgba(230, 234, 240, 0.5);
+  --accent: #47b0ff;
+  --danger: #ff5a6a;
+  --warning: #f7b955;
+  --success: #59d18a;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  @apply min-h-full;
+}
+
+body {
+  @apply bg-bg font-sans text-text antialiased;
+}
+
+@layer base {
+  h1 {
+    @apply text-[2rem] leading-tight tracking-[-0.02em] md:text-[2.25rem];
+  }
+
+  h2 {
+    @apply text-2xl leading-tight;
+  }
+
+  h3 {
+    @apply text-lg leading-snug;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply rounded-lg border border-border bg-panel shadow-panel;
+  }
+
+  .surface-muted {
+    @apply rounded-lg border border-border bg-panel-2;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+
+  .page-wrap {
+    @apply mx-auto w-full max-w-7xl px-4 py-6 md:px-6 md:py-8;
+  }
+
+  .text-caption {
+    @apply text-xs text-muted;
+  }
+}
